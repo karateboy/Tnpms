@@ -1,0 +1,61 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+@media (max-width: 767px) {
+  .map_container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+  }
+}
+
+@media (min-width: 768px) {
+  .map_container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+  }
+}
+.map_container .map_canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.realtimeChart_container {
+  position: relative;
+  width: 120%;
+}
+
+.login-panel {
+  margin-top: 25%;
+}
+
+.pdf {
+  color: red;
+  text-shadow: 3px 3px 3px;
+}
+
+.excel {
+  color: blue;
+  text-shadow: 3px 3px 3px;
+}
+
+
+.st-sort-ascent:before {
+  content: '\25B2';
+}
+
+
+body{
+  --font-family-sans-serif: "Montserrat", Helvetica, Arial, serif;
+    --font-family-monospace: "Montserrat", Helvetica, Arial, serif;
+}
