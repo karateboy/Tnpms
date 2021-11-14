@@ -121,25 +121,6 @@ require('vue-loading-overlay/dist/vue-loading.css');
 
 Vue.config.productionTip = false;
 
-router.beforeEach((to, from, next) => {
-  const login = Cookies.get('login');
-
-  // FIXME
-  if (login || to.name === 'login') {
-    next();
-  } else {
-    next({ name: 'login' });
-  }
-});
-
-Vue.use(VueGoogleMap, {
-  load: {
-    key: 'AIzaSyDiE_K-p1_3V-lff9yXfD6KkC1SGpXVcKc',
-    libraries: 'places', // This is required if you use the Autocomplete plugin
-  },
-  installComponents: true,
-});
-
 new Vue({
   router,
   store,

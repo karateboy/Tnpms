@@ -29,27 +29,18 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/renewable-energy',
-      name: 'renewable-energy',
-      component: () => import('@/views/SmartGrid.vue'),
+      path: '/neoenergy',
+      name: 'neoenergy',
+      component: () => import('@/views/Neoenergy.vue'),
       meta: {
-        pageTitle: '智能電網',
-        breadcrumb: [],
-      },
-    },
-    {
-      path: '/renewable-energy',
-      name: 'renewable-energy',
-      component: () => import('@/views/SmartGrid.vue'),
-      meta: {
-        pageTitle: '智能電網',
+        pageTitle: '再生能源',
         breadcrumb: [],
       },
     },
     {
       path: '/energy-saving',
       name: 'energy-saving',
-      component: () => import('@/views/SmartGrid.vue'),
+      component: () => import('@/views/EnergySaving.vue'),
       meta: {
         pageTitle: '節電成效',
         breadcrumb: [],
@@ -58,7 +49,7 @@ const router = new VueRouter({
     {
       path: '/requirement-adjust',
       name: 'requirement-adjust',
-      component: () => import('@/views/SmartGrid.vue'),
+      component: () => import('@/views/RequirementAdjust.vue'),
       meta: {
         pageTitle: '需量調控',
         breadcrumb: [],
@@ -67,7 +58,7 @@ const router = new VueRouter({
     {
       path: '/links',
       name: 'links',
-      component: () => import('@/views/SmartGrid.vue'),
+      component: () => import('@/views/Links.vue'),
       meta: {
         pageTitle: '友善連結',
         breadcrumb: [],

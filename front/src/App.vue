@@ -124,7 +124,14 @@ export default Vue.extend({
     const { isRTL } = $themeConfig.layout;
     document.documentElement.setAttribute('dir', isRTL ? 'rtl' : 'ltr');
   },
-  async mounted() {},
+  async mounted() {
+    this.$ability.update([
+      {
+        action: 'manage',
+        subject: 'all',
+      },
+    ]);
+  },
   methods: {},
 });
 </script>

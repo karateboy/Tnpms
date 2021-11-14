@@ -12,7 +12,7 @@ export default [
   {
     title: '再生能源',
     icon: 'SunIcon',
-    route: 'renewable-energy',
+    route: 'neoenergy',
   },
   {
     title: '節電成效',

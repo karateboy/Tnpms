@@ -1,7 +1,7 @@
 <template>
   <b-row class="match-height">
     <b-col lg="12" md="12">
-      <img src="../assets/images/smartGrid.png" />
+      <b-card> </b-card>
     </b-col>
   </b-row>
 </template>
@@ -9,6 +9,11 @@
 <script lang="ts">
 import Vue from 'vue';
 import moment from 'moment';
+
+interface Location {
+  lat: number;
+  lng: number;
+}
 
 export default Vue.extend({
   data() {
