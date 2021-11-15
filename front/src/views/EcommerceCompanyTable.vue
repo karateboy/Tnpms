@@ -7,13 +7,9 @@
           <b-avatar rounded size="32" variant="light-company">
             <b-img :src="data.item.avatarImg" alt="avatar img"
           /></b-avatar>
-          <div>
-            <div class="font-weight-bolder">
-              {{ data.item.title }}
-            </div>
-            <div class="font-small-2 text-muted">
-              {{ data.item.subtitle }}
-            </div>
+
+          <div class="font-weight-bolder">
+            {{ data.item.title }}
           </div>
         </div>
       </template>
@@ -33,9 +29,6 @@
         <div class="d-flex flex-column">
           <span class="font-weight-bolder mb-25">{{
             data.item.viewTitle
-          }}</span>
-          <span class="font-small-2 text-muted text-nowrap">{{
-            data.item.viewsub
           }}</span>
         </div>
       </template>
@@ -62,15 +55,7 @@
 </template>
 
 <script>
-import { BCard, BTable, BAvatar, BImg } from 'bootstrap-vue';
-
 export default {
-  components: {
-    BCard,
-    BTable,
-    BAvatar,
-    BImg,
-  },
   props: {
     tableData: {
       type: Array,
@@ -81,11 +66,10 @@ export default {
   data() {
     return {
       fields: [
-        { key: 'company', label: 'COMPANY' },
-        { key: 'category', label: 'CATEGORY' },
-        { key: 'views', label: 'VIEWS' },
-        { key: 'revenue', label: 'REVENUE' },
-        { key: 'sales', label: 'SALES' },
+        { key: 'no', label: '編號' },
+        { key: 'company', label: '場館區域' },
+        { key: 'views', label: '上月節電率' },
+        { key: 'sales', label: '成長' },
       ],
     };
   },

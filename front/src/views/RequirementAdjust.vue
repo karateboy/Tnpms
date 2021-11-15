@@ -3,7 +3,9 @@
     <b-col lg="12" md="12">
       <b-card no-body>
         <b-tabs card content-class="mt-3" fill>
-          <b-tab title="總覽" active> </b-tab>
+          <b-tab title="總覽" active>
+            <img src="../assets/images/adjust.png" fluid-grow />
+          </b-tab>
           <b-tab title="投標及抑低建議"> </b-tab>
           <b-tab title="今日執行情形"> </b-tab>
           <b-tab title="得標與執行紀錄">

@@ -1,22 +1,10 @@
 <template>
   <b-card no-body>
     <b-card-header>
-      <b-card-title>Product Orders</b-card-title>
-      <b-dropdown
-        text="Last 7 Days"
-        variant="transparent"
-        class="chart-dropdown"
-        right
-        no-caret
-        toggle-class="p-0"
-        size="sm"
+      <b-card-title
+        ><h2><strong>電量分析</strong></h2></b-card-title
       >
-        <b-dropdown-item v-for="day in chartInfo.lastDays" :key="day">
-          {{ day }}
-        </b-dropdown-item>
-      </b-dropdown>
     </b-card-header>
-
     <b-card-body>
       <!-- apex chart -->
       <vue-apex-charts
@@ -40,9 +28,9 @@
             icon="CircleIcon"
             size="16"
             :class="
-              key === 'finished'
+              key === '購電量'
                 ? 'text-primary'
-                : key === 'pending'
+                : key === '發電量'
                 ? 'text-warning'
                 : 'text-danger'
             "
@@ -57,26 +45,12 @@
 </template>
 
 <script>
-import {
-  BCard,
-  BCardHeader,
-  BCardTitle,
-  BDropdown,
-  BDropdownItem,
-  BCardBody,
-} from 'bootstrap-vue';
 import VueApexCharts from 'vue-apexcharts';
 import { $themeColors } from '@themeConfig';
 
 export default {
   components: {
     VueApexCharts,
-    BCard,
-    BCardHeader,
-    BCardTitle,
-    BDropdown,
-    BDropdownItem,
-    BCardBody,
   },
   data() {
     return {
@@ -84,7 +58,7 @@ export default {
       productOrdersRadialBar: {
         series: [70, 52, 26],
         chartOptions: {
-          labels: ['Finished', 'Pending', 'Rejected'],
+          labels: ['購電量', '發電量', '綠能'],
           plotOptions: {
             radialBar: {
               size: 150,
@@ -104,7 +78,7 @@ export default {
                 },
                 total: {
                   show: true,
-                  label: 'Total',
+                  label: '總和',
                   fontSize: '1.286rem',
                   colors: '#5e5873',
                   fontWeight: '500',
@@ -140,9 +114,7 @@ export default {
     };
   },
   created() {
-    this.$http.get('/card/card-analytics/product-orders').then(res => {
-      this.chartInfo = res.data;
-    });
+    this.chartInfo = { 購電量: 2300, 發電量: 1400, 綠能: 475 };
   },
 };
 </script>

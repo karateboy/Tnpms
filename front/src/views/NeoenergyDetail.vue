@@ -26,9 +26,7 @@
         <card-analytic-revenue-report></card-analytic-revenue-report>
       </div>
     </b-col>
-    <b-col cols="4"
-      ><img src="../assets/images/neoenergy.png" fluid-grow
-    /></b-col>
+    <b-col cols="4"><img src="../assets/images/neoenergy.png" fluid /></b-col>
   </b-row>
 </template>
 <script lang="ts">

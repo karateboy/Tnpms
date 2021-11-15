@@ -1,9 +1,9 @@
 <template>
   <b-card no-body class="card-revenue-budget">
     <b-row class="mx-0">
-      <b-col md="8" class="revenue-report-wrapper">
+      <b-col md="12" class="revenue-report-wrapper">
         <div class="d-sm-flex justify-content-between align-items-center mb-3">
-          <h4 class="card-title mb-50 mb-sm-0">Revenue Report</h4>
+          <h4 class="card-title mb-50 mb-sm-0">發電/用電量分析</h4>
           <div class="d-flex align-items-center">
             <div class="d-flex align-items-center mr-2">
               <span
@@ -14,7 +14,7 @@
                   cursor-pointer
                 "
               />
-              <span>Earning</span>
+              <span>發電量</span>
             </div>
             <div class="d-flex align-items-center">
               <span
@@ -25,7 +25,7 @@
                   cursor-pointer
                 "
               />
-              <span>Expense</span>
+              <span>用電量</span>
             </div>
           </div>
         </div>
@@ -39,49 +39,11 @@
           :series="revenueReport.series"
         />
       </b-col>
-
-      <b-col md="4" class="budget-wrapper">
-        <b-dropdown
-          text="2020"
-          size="sm"
-          class="budget-dropdown"
-          variant="outline-primary"
-        >
-          <b-dropdown-item v-for="year in revenue_report.years" :key="year">
-            {{ year }}
-          </b-dropdown-item>
-        </b-dropdown>
-
-        <h2 class="mb-25">${{ revenue_report.price }}</h2>
-        <div class="d-flex justify-content-center">
-          <span class="font-weight-bolder mr-25">Budget:</span>
-          <span>56,800</span>
-        </div>
-        <vue-apex-charts
-          id="budget-chart"
-          type="line"
-          height="80"
-          :options="budgetChart.options"
-          :series="budgetChart.series"
-        />
-
-        <b-button v-ripple.400="'rgba(255, 255, 255, 0.15)'" variant="primary">
-          Increase Budget
-        </b-button>
-      </b-col>
     </b-row>
   </b-card>
 </template>
 
 <script>
-import {
-  BCard,
-  BRow,
-  BCol,
-  BDropdown,
-  BDropdownItem,
-  BButton,
-} from 'bootstrap-vue';
 import VueApexCharts from 'vue-apexcharts';
 import { $themeColors } from '@themeConfig';
 import Ripple from 'vue-ripple-directive';
@@ -89,12 +51,6 @@ import Ripple from 'vue-ripple-directive';
 export default {
   components: {
     VueApexCharts,
-    BDropdown,
-    BDropdownItem,
-    BCard,
-    BButton,
-    BRow,
-    BCol,
   },
   directives: {
     Ripple,
@@ -129,17 +85,7 @@ export default {
             },
           },
           xaxis: {
-            categories: [
-              'Jan',
-              'Feb',
-              'Mar',
-              'Apr',
-              'May',
-              'Jun',
-              'Jul',
-              'Aug',
-              'Sep',
-            ],
+            categories: ['0', '3', '6', '9', '12', '15', '18', '21', '24'],
             labels: {
               style: {
                 colors: '#b9b9c3',

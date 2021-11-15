@@ -1,7 +1,7 @@
 <template>
   <b-card v-if="data" no-body class="card-revenue-budget">
     <b-row class="mx-0">
-      <b-col md="8" class="revenue-report-wrapper">
+      <b-col md="12" class="revenue-report-wrapper">
         <div class="d-sm-flex justify-content-between align-items-center mb-3">
           <h4 class="card-title mb-50 mb-sm-0">Revenue Report</h4>
           <div class="d-flex align-items-center">
@@ -14,7 +14,7 @@
                   cursor-pointer
                 "
               />
-              <span>Earning</span>
+              <span>發電量</span>
             </div>
             <div class="d-flex align-items-center ml-75">
               <span
@@ -25,7 +25,7 @@
                   cursor-pointer
                 "
               />
-              <span>Expense</span>
+              <span>用電量</span>
             </div>
           </div>
         </div>
@@ -38,36 +38,6 @@
           :options="revenueReport.chartOptions"
           :series="data.revenueReport.series"
         />
-      </b-col>
-
-      <b-col md="4" class="budget-wrapper">
-        <b-dropdown
-          text="2020"
-          size="sm"
-          class="budget-dropdown"
-          variant="outline-primary"
-        >
-          <b-dropdown-item v-for="year in data.years" :key="year">
-            {{ year }}
-          </b-dropdown-item>
-        </b-dropdown>
-
-        <h2 class="mb-25">${{ data.price }}</h2>
-        <div class="d-flex justify-content-center">
-          <span class="font-weight-bolder mr-25">Budget:</span>
-          <span>56,800</span>
-        </div>
-        <vue-apex-charts
-          id="budget-chart"
-          type="line"
-          height="80"
-          :options="budgetChart.options"
-          :series="data.budgetChart.series"
-        />
-
-        <b-button v-ripple.400="'rgba(255, 255, 255, 0.15)'" variant="primary">
-          Increase Budget
-        </b-button>
       </b-col>
     </b-row>
   </b-card>

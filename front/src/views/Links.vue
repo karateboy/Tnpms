@@ -1,7 +1,7 @@
 <template>
   <b-row class="match-height">
     <b-col lg="12" md="12">
-      <b-card> </b-card>
+      <img src="../assets/images/links.png" fluid />
     </b-col>
   </b-row>
 </template>
