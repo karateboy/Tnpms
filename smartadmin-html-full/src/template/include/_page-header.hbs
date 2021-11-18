@@ -36,7 +36,7 @@
 	<div class="search">
 		<form class="app-forms hidden-xs-down" role="search" action="page_search.html" autocomplete="off">
 			{{!-- <i class="{{iconPrefix}} fa-search position-absolute fs-xl m-2 p-1 text-muted pos-left"></i> --}}
-			<input type="text" id="search-field" placeholder="Search for anything" class="form-control" tabindex="1">
+			<input type="text" id="search-field" placeholder="沙崙智慧綠能科學城電能管理系統資訊平台" class="form-control" tabindex="1">
 			<a href="#" onclick="return false;" class="btn-danger btn-search-close js-waves-off d-none" data-action="toggle" data-class="mobile-search-on">
 				<i class="{{iconPrefix}} fa-times"></i>
 			</a>
@@ -62,14 +62,14 @@
 		{{/if}}
 
 		<!-- app shortcuts -->
-		<div>
+		{{!-- <div>
 			<a href="#" class="header-icon" data-toggle="dropdown" title="My Apps">
 				<i class="{{iconPrefix}} fa-cube"></i>
 			</a>
 			<div class="dropdown-menu dropdown-menu-animated w-auto h-auto">
 				{{> include/_dropdown-app}}
 			</div>
-		</div>
+		</div> --}}
 
 		{{#if chatInterface}}
 		<!-- app message -->
@@ -80,7 +80,7 @@
 		{{/if}}
 
 		<!-- app notification -->
-		<div>
+		{{!-- <div>
 			<a href="#" class="header-icon" data-toggle="dropdown" title="You got 11 notifications">
 				<i class="{{iconPrefix}} fa-bell"></i>
 				<span class="badge badge-icon">11</span>
@@ -89,11 +89,12 @@
 				{{> include/_dropdown-notification}}
 			</div>
 		</div>
-
+ --}}
 		<!-- app user menu -->
-		<div>
+		<img src="img/demo/avatars/{{avatar}}" class="mr-2 profile-image" alt="{{user}}">
+		{{!-- <div>
 			<a href="#" data-toggle="dropdown" title="{{email}}" class="header-icon d-flex align-items-center justify-content-center ml-2">
-				<img src="img/demo/avatars/{{avatar}}" class="profile-image rounded-circle" alt="{{user}}"> 
+				<img src="img/demo/avatars/{{avatar}}" class="profile-image" alt="{{user}}"> 				
 				<!-- you can also add username next to the avatar with the codes below:
 				<span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
 				<i class="ni ni-chevron-down hidden-xs-down"></i> -->
@@ -101,7 +102,7 @@
 			<div class="dropdown-menu dropdown-menu-animated dropdown-lg">
 				{{> include/_dropdown-menu}}
 			</div>
-		</div>
+		</div> --}}
 
 	</div>
 
